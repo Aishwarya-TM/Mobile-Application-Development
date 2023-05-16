@@ -98,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-
 Developed by: Aishwarya.T.M
 
 Registeration Number : 212221220002
