@@ -89,14 +89,129 @@ Program to print the text “calculator operation”.
 
 </LinearLayout>
 
-Developed by:
-Registeration Number :
-*/
-```
+## MainActivity.java:
+package com.example.calculator;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import android.view.View;
+
+import android.widget.Button;
+
+import android.widget.EditText;
+
+import android.widget.TextView;
+
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText number1EditText, number2EditText;
+    private Button addButton, subtractButton, multiplyButton, divideButton;
+    private TextView resultTextView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+    
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        number1EditText = findViewById(R.id.number1EditText);
+        number2EditText = findViewById(R.id.number2EditText);
+        addButton = findViewById(R.id.addButton);
+        subtractButton = findViewById(R.id.subtractButton);
+        multiplyButton = findViewById(R.id.multiplyButton);
+        divideButton = findViewById(R.id.divideButton);
+        resultTextView = findViewById(R.id.resultTextView);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+        
+            @Override
+            public void onClick(View v) {
+                calculateResult("+");
+            }
+        });
+
+        subtractButton.setOnClickListener(new View.OnClickListener() {
+        
+            @Override
+            public void onClick(View v) {
+                calculateResult("-");
+            }
+        });
+
+        multiplyButton.setOnClickListener(new View.OnClickListener() {
+        
+            @Override
+            public void onClick(View v) {
+                calculateResult("*");
+            }
+        });
+
+        divideButton.setOnClickListener(new View.OnClickListener() {
+        
+            @Override
+            public void onClick(View v) {
+                calculateResult("/");
+            }
+        });
+    }
+
+    private void calculateResult(String operator) {
+    
+        String number1Str = number1EditText.getText().toString();
+        String number2Str = number2EditText.getText().toString();
+
+        if (number1Str.isEmpty() || number2Str.isEmpty()) {
+            Toast.makeText(MainActivity.this, "Please enter both numbers", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        double number1 = Double.parseDouble(number1Str);
+        
+        double number2 = Double.parseDouble(number2Str);
+
+        double result = 0;
+
+        switch (operator) {
+            case "+":
+                result = number1 + number2;
+                break;
+            case "-":
+                result = number1 - number2;
+                break;
+            case "*":
+                result = number1 * number2;
+                break;
+            case "/":
+                if (number2 == 0) {
+                    Toast.makeText(MainActivity.this, "Cannot divide by zero", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                result = number1 / number2;
+                break;
+        }
+
+        resultTextView.setText("Result: " + result);
+    }
+}
+
+Developed by: Aishwarya T.M
+
+Registeration Number : 212221220002
 
 ## OUTPUT
+![Screenshot (252)](https://github.com/Aishwarya-TM/Mobile-Application-Development/assets/127846109/f048ebc6-418c-4f29-8de0-5a5821d78c31)
 
+![Screenshot (253)](https://github.com/Aishwarya-TM/Mobile-Application-Development/assets/127846109/f82e76ee-7775-45c1-b0b3-331de8450f94)
 
+![Screenshot (254)](https://github.com/Aishwarya-TM/Mobile-Application-Development/assets/127846109/b1a6c7ea-2aa8-4218-b477-d4a8df9df793)
+
+![ex9 1](https://github.com/Aishwarya-TM/Mobile-Application-Development/assets/127846109/795c6969-944a-44ca-8c15-805d211e7542)
+
+![ex9 2](https://github.com/Aishwarya-TM/Mobile-Application-Development/assets/127846109/2ddfa26f-b6a4-4c69-b227-7e07fbfc7bb7)
 
 
 ## RESULT
