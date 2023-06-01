@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             canvas.drawCircle(200, 350, 150, paint);
             canvas.drawText("Square", 120, 800, paint);
             canvas.drawRect(50, 850, 350, 1150, paint);
-            canvas.drawText("Line", 420, 150, paint);
+            canvas.drawText("Line", 420, 800, paint);
             canvas.drawLine(520, 850, 520, 1150, paint);
         } catch (Exception e) {
             e.printStackTrace();
@@ -108,9 +108,9 @@ Registeration Number : 212221220002
 
 ![Screenshot (265)](https://github.com/Aishwarya-TM/Mobile-Application-Development/assets/127846109/e486c6df-d5b6-4bca-bc59-02bc32b00f38)
 
+![Screenshot (266)](https://github.com/Aishwarya-TM/Mobile-Application-Development/assets/127846109/c654c016-05a9-441c-afd0-62cbd6749d53)
 
-
-
+![ex12](https://github.com/Aishwarya-TM/Mobile-Application-Development/assets/127846109/097e4c9e-8b3c-4f2a-b612-9afb363c03ce)
 
 ## RESULT
 Thus a Simple Android Application to create and design an android application that draws basic graphical primitives on the screen using Android Studio is developed and executed successfully.
