@@ -130,12 +130,19 @@ Program to display animation operation”.
 
 ## MainActivity.java:
 package com.example.androidanimation;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+
 import android.view.animation.Animation;
+
 import android.view.animation.AnimationUtils;
+
 import android.widget.ImageView;
+
 import android.view.View;
+
 
 
 public class MainActivity extends AppCompatActivity {
